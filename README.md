@@ -38,3 +38,23 @@ It uses a modified version of the Wilfrid Laurier University Course Information 
 ETL: Beautiful Soup, Python.  
 Rest API: Node.js, Express.js.  
 Database: MongoDB.  
+
+## Try It Out!
+
+Try a sample request for the course CP317 ([Software Engineering](https://academic-calendar.wlu.ca/course.php?c=60189&cal=1&d=2412&s=1000&y=83))
+[https://wlu-course-info.herokuapp.com/api/courses/CP317](https://wlu-course-info.herokuapp.com/api/courses/CP317)  
+  
+Know any course you want to try? Simply follow the format of the query below (Remove the curly braces {})!  
+`https://wlu-course-info.herokuapp.com/api/courses/{course-code}`  
+
+## How to Run On Local Machine
+
+Start out my going into your desired directory and cloning the project:  
+`git clone https://github.com/arzekeil/wlu-course-info-api.git`
+  
+Next go into the project directory and open up the command line and type out this command:  
+`npm start`  
+
+This will start the program  
+
+Hope you have fun! 👋  
