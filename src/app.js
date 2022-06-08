@@ -28,6 +28,9 @@ app.get("/api/courses/:courseID", (req, res) => {
             })
             .catch(err => {
                 return res.status(500).json({ message: `An internal error occured: ${err}` });
+            })
+            .then(() => {
+                client.close();
             });
     });
 });
