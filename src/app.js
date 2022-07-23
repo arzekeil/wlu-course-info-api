@@ -21,9 +21,9 @@ app.get("/api/courses/:courseID", (req, res) => {
     client.connect(err => {
         if (err) res.status(500).json({ message: `An internal error occured: ${err}` });
 
-        client.db("simply-degree").collection("courses").findOne({ 'course_id': id })
+        client.db("wlu-course-info-api").collection("courses").findOne({ 'course_id': id })
             .then(data => {
-                if (!data) return res.status(404).json({ message: `Course ID ${id} was not found.` });
+                if (!data) return res.status(400).json({ message: `Course ID ${id} was not found.` });
                 return res.status(200).json(data);
             })
             .catch(err => {
